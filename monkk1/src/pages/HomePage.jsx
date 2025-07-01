@@ -1,18 +1,18 @@
+import { useNavigate } from 'react-router-dom';
+import ProductList from '../components/products/ProductList';
 
-import {useNavigate} from 'react-router-dom'
-import ProductList  from '../componets/products/ProductList'
-
-const HomePage =()=>{
+const HomePage = () => {
     const navigate = useNavigate();
 
-    const handleViewDatail = (product)=>{
-    navigate(`/product/${product}`)
-    }
+    const handleViewDetail = (productId) => {
+        navigate(`/product/${productId}`);
+    };
 
     return (
         <div className='home-page'>
-            <ProductList onViewDetail={handleViewDatail}/>
+            <ProductList onViewDetail={handleViewDetail} />
         </div>
-    )
-}
+    );
+};
+
 export default HomePage;

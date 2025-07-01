@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://dummyjson.com/';
+const BASE_URL = 'https://dummyjson.com';
 
 export const api ={
     getProducts: async( limit = 30 ,skip =0)=>{
@@ -7,7 +7,7 @@ export const api ={
    return response.json();
     },
 
-    getProducts: async(id)=>{
+    getProduct: async(id)=>{
         const response =await fetch(`${BASE_URL}/products/${id}`)
         return response.json();
     },
@@ -16,7 +16,7 @@ export const api ={
         const response =await fetch(`${BASE_URL}/products/search?q=${query}`);
         return response.json();
     }, 
-    getCategories : async () =>{
+    getCategories : async () =>{ 
         const response =await fetch(`${BASE_URL}/products/catagories`);
         return response.json();
     },
