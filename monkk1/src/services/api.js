@@ -7,7 +7,7 @@ export const api ={
    return response.json();
     },
 
-    getProduct: async(id)=>{
+    getProduct: async(id)=>{ 
         const response =await fetch(`${BASE_URL}/products/${id}`)
         return response.json();
     },
